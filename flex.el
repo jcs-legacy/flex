@@ -55,9 +55,9 @@ The return value is in the range 0.0 to 1.0 the later being full-match."
 
 (defun flex-position (av string start end from-end)
   "Searchs a character AV on STRING backwards up until index END.
-
 Arguments START and FROM-END are arguments fed to function `cl-position'."
-  (cl-position av string :start start :end end :from-end from-end))
+  (or (cl-position (upcase av) string :start start :end end :from-end from-end)
+      (cl-position (downcase av) string :start start :end end :from-end from-end)))
 
 (defun flex-bits (string abbreviation)
   "Construct a float number representing the match score to STRING of given ABBREVIATION."

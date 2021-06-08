@@ -12,3 +12,10 @@ Algorithm is extracted from [ido-better-flex](https://github.com/vic/ido-better-
 (flex-score "install-package" "instpkg")  ; 7.9400006103701894
 (flex-score "" "instpkg")                 ; 0.0
 ```
+
+## Contribution
+
+If you would like to contribute to this project, you may either
+clone and make pull requests to this repository. Or you can
+clone the project and establish your own branch of this tool.
+Any methods are welcome!

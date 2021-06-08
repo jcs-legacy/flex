@@ -34,13 +34,13 @@
 
 (require 'cl-lib)
 
-(defconst flex-NO-MATCH 0.0
+(defconst flex-no-match 0.0
   "The score indicating a negative match.")
 
-(defconst flex-MATCH 1.0
+(defconst flex-match 1.0
   "The score indicating a full-match.")
 
-(defconst flex-EMPTY 0.8
+(defconst flex-empty 0.8
   "The score to return when the abrreviation string is empty.")
 
 ;;;###autoload
@@ -49,8 +49,8 @@
 
 The return value is in the range 0.0 to 1.0 the later being full-match."
   (let ((len (length abbreviation)))
-    (cond ((= 0 len) flex-EMPTY)
-          ((> len (length string)) flex-NO-MATCH)
+    (cond ((= 0 len) flex-empty)
+          ((> len (length string)) flex-no-match)
           (t (flex-build-score string abbreviation)))))
 
 (defun flex-position (av string start end from-end)
@@ -80,7 +80,7 @@ Arguments START and FROM-END are arguments fed to function `cl-position'."
                                  av string
                                  (if fe 0 (+ 1 index)) (if fe index ls) fe))))
 
-        (unless index (throw 'failed flex-NO-MATCH))
+        (unless index (throw 'failed flex-no-match))
 
         ;; rank first if we had a forward-match
         (unless fe (setq fws (+ 1 fws)))
@@ -117,7 +117,7 @@ as it is a better extact match.
 The numbers right to the decimal point are the ratio of how many
 chars did matches in the string from the start position."
   (let ((bits (flex-bits string abbreviation)))
-    (/ (* bits flex-MATCH) (- (expt 2 (length string)) 1))))
+    (/ (* bits flex-match) (- (expt 2 (length string)) 1))))
 
 (provide 'flex)
 ;;; flex.el ends here

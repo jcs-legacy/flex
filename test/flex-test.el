@@ -29,11 +29,9 @@
 (require 'debug)
 
 (ert-deftest flex-test-score ()
-  (should (= (flex-score "FooBar" "foo") 0.9500000000000001))
-  (should (= (flex-score "FooBar" "fb") 0.9166666666666669))
-  (should (= (flex-score "Foo Bar" "fb") 0.9285714285714287))
-  (should (= (flex-score "Foo Bar" "baz") 0.0))
-  (should (= (flex-score "Foo Bar" "") 0.8)))
+  (should (= (flex-score "package-install" "instpkg") 6.581987975707267))
+  (should (= (flex-score "install-package" "instpkg") 7.9400006103701894))
+  (should (= (flex-score "" "instpkg") 0.0)))
 
 (provide 'flex-test)
 ;;; flex-test.el ends here

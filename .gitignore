@@ -1,7 +1,6 @@
 # ignore these directories.
 /.git
 /recipes
-/test
 flex-pkg.el
 
 # ignore generated files.

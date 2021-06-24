@@ -45,7 +45,6 @@ jobs:
                    sudo apt-get install clangd-9
 
             - name: Check clangd
-              if: runner.os == 'Linux'
               run: "clangd-9 --version"
 
             - name: Run tests

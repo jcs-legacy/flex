@@ -1,6 +1,6 @@
 ;;; flex.el --- Flexible Matching Library  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2021  Shen, Jen-Chieh
+;; Copyright (C) 2021-2022  Shen, Jen-Chieh
 ;; Created date 2021-06-08 12:59:19
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
@@ -60,13 +60,14 @@ Arguments START and FROM-END are arguments fed to function `cl-position'."
       (cl-position (downcase av) string :start start :end end :from-end from-end)))
 
 (defun flex-bits (string abbreviation)
-  "Construct a float number representing the match score to STRING of given ABBREVIATION."
+  "Construct a float number representing the match score to STRING of given
+ABBREVIATION."
   (let ((score 0) (fws 0) (st 0) (ls (length string)) fe index av n)
     (catch 'failed
       (dotimes (i (length abbreviation))
 
-        (setq av (elt abbreviation i) fe nil)
-        (setq index (flex-position av string st ls fe))
+        (setq av (elt abbreviation i) fe nil
+              index (flex-position av string st ls fe))
 
         (unless index  ; could not find foward, try to backtrack
           (setq fe t)
@@ -85,8 +86,8 @@ Arguments START and FROM-END are arguments fed to function `cl-position'."
         ;; rank first if we had a forward-match
         (unless fe (setq fws (+ 1 fws)))
 
-        (setq st (+ 1 index))
-        (setq score (logior score (lsh 1 n))))
+        (setq st (+ 1 index)
+              score (logior score (lsh 1 n))))
 
       (logior score (lsh fws ls)))))
 

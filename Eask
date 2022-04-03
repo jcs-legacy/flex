@@ -1,6 +1,10 @@
 (source "melpa")
 
+(package "flex" "0.0.2" "Flexible Matching Library")
+
 (package-file "flex.el")
+
+(depends-on "emacs" "24.3")
 
 (development
  (depends-on "ert-runner"))

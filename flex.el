@@ -4,11 +4,10 @@
 ;; Created date 2021-06-08 12:59:19
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
-;; Description: Flexible Matching Library
-;; Keyword: flex fuzzy matching
+;; URL: https://github.com/jcs-elpa/flex
 ;; Version: 0.0.2
 ;; Package-Requires: ((emacs "24.3"))
-;; URL: https://github.com/jcs-elpa/flex
+;; Keywords: flex fuzzy matching
 
 ;; This file is NOT part of GNU Emacs.
 

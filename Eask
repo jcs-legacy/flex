@@ -2,6 +2,9 @@
          "0.0.2"
          "Flexible Matching Library")
 
+(website-url "https://github.com/jcs-elpa/flex")
+(keywords "flex" "fuzzy" "matching")
+
 (package-file "flex.el")
 
 (source "melpa")

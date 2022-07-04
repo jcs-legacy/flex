@@ -7,7 +7,7 @@
 ;; URL: https://github.com/jcs-elpa/flex
 ;; Version: 0.0.2
 ;; Package-Requires: ((emacs "24.3"))
-;; Keywords: flex fuzzy matching
+;; Keywords: matching flex fuzzy
 
 ;; This file is NOT part of GNU Emacs.
 

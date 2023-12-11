@@ -3,7 +3,7 @@
 # flex
 > Flexible Matching Library
 
-[![CI](https://github.com/jcs-elpa/flex/actions/workflows/test.yml/badge.svg)](https://github.com/jcs-elpa/flex/actions/workflows/test.yml)
+[![CI](https://github.com/jcs-legacy/flex/actions/workflows/test.yml/badge.svg)](https://github.com/jcs-legacy/flex/actions/workflows/test.yml)
 
 Algorithm is extracted from package [ido-better-flex](https://github.com/vic/ido-better-flex).
 

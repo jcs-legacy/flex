@@ -1,3 +1,5 @@
+;; -*- mode: eask; lexical-binding: t -*-
+
 (package "flex"
          "0.0.2"
          "Flexible Matching Library")
